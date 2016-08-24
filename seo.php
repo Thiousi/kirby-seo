@@ -16,6 +16,10 @@ function seo($type, $data = array(), $return = false) {
 		$html = '';
 		$html['title'] = '<title>' . $content . '</title>' . "\n";
 		$html['description'] = ( ! empty( $content ) ) ?  '<meta name="description" content="' . $content . '">' . "\n" : '';
+		$html['og:title'] = ( ! empty( $content ) ) ?  '<meta name="og:title" content="' . $content . '">' . "\n" : '';
+		$html['og:description'] = ( ! empty( $content ) ) ?  '<meta name="description" content="' . $content . '">' . "\n" : '';
+		$html['itemprop:name'] = ( ! empty( $content ) ) ?  '<meta itemprop="name" content="' . $content . '">' . "\n" : '';
+		$html['itemprop:description'] = ( ! empty( $content ) ) ?  '<meta itemprop="description" content="' . $content . '">' . "\n" : '';
 		return $html[$type];
 	}
 }
